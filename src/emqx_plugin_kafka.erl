@@ -299,7 +299,7 @@ format_payload(Message) ->
   % ?LOG_INFO("[KAFKA PLUGIN]Tail= ~s , RawType= ~s~n",[Tail,RawType]),
   ClientId = Message#message.from,
   Content = transform_payload(Message#message.payload),
-  Payload = [Content],
+  Payload = Content,
 
   {ok, ClientId, Payload}.
 
